@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+
     <title>Document</title>
   </head>
   <body>
@@ -14,7 +16,7 @@
     </div>
     <!-- main section -->
     <div class="relative m-4">
-      <img class="h-[700px]  w-full" src="./img/main.jpg" alt="" />
+      <img class="h-[700px] w-full" src="./img/main.jpg" alt="" />
       <div class="absolute text-white top-[40%] left-[23%]">
         <h1 class="text-2xl font-semibold">Taste Our Delicious Best Foods</h1>
         <br />
@@ -24,14 +26,31 @@
         </p>
         <div class="flex gap-4 mt-4">
           <input
+          id="input"
             type="text"
             class="px-4 bg-slate-700 py-3 rounded-md"
             placeholder="Search any food"
           />
-          <button class="bg-yellow-300 px-4 py-3 rounded-md">search</button>
+          <button onclick="searchMeal()" class="bg-yellow-300 px-4 py-3 rounded-md">search</button>
         </div>
       </div>
     </div>
+    <main class="mt-20">
+      <h1 class="text-xl text-center">Your Favourite Food</h1>
+      <div id="display" class="grid md:grid-cols-3 gap-4 m-4 h-full">
+    
+      </div>
+    </main>
+    <!-- The button to open modal -->
+
+<!-- Put this part before </body> tag -->
+
+ <div id="some">
+
+ </div>
+
+    <div class="h-[400px]"></div>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="./app.js"></script>
   </body>
 </html>
