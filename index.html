@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
-</head>
-<body>
-    <h1 class="text-xl">lorem</h1>
-
+  </head>
+  <body>
+    <div class="flex justify-around mt-4">
+      <a class="text-2xl font-semibold" href="#">Food</a>
+      <button class="bg-yellow-300 px-4 py-3 rounded-md">Sign Up</button>
+    </div>
+    <!-- main section -->
+    <div class="relative m-4">
+      <img class="h-[700px]  w-full" src="./img/main.jpg" alt="" />
+      <div class="absolute text-white top-[40%] left-[23%]">
+        <h1 class="text-2xl font-semibold">Taste Our Delicious Best Foods</h1>
+        <br />
+        <p>
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected humou.
+        </p>
+        <div class="flex gap-4 mt-4">
+          <input
+            type="text"
+            class="px-4 bg-slate-700 py-3 rounded-md"
+            placeholder="Search any food"
+          />
+          <button class="bg-yellow-300 px-4 py-3 rounded-md">search</button>
+        </div>
+      </div>
+    </div>
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
