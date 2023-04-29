@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <title>Document</title>
   </head>
@@ -17,52 +21,81 @@
     <!-- main section -->
     <div class="relative m-4">
       <img class="h-[700px] w-full" src="./img/main.jpg" alt="" />
-      <div class="absolute text-white top-[40%] left-[23%]">
+      <div class="absolute text-white top-[40%] md:left-[23%] m-4 md:m-0">
         <h1 class="text-2xl font-semibold">Taste Our Delicious Best Foods</h1>
         <br />
         <p>
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected humou.
         </p>
-        <div class="flex gap-4 mt-4">
+        <div class="md:flex gap-4 mt-4">
           <input
-          id="input"
+            id="input"
             type="text"
-            class="px-4 bg-slate-700 py-3 rounded-md"
+            class="px-4 bg-slate-700 py-3 w-full rounded-md"
             placeholder="Search any food"
           />
-          <button onclick="searchMeal()" class="bg-yellow-300 px-4 py-3 rounded-md">search</button>
+          <button
+            onclick="searchMeal()"
+            class="bg-yellow-300 px-4 mt-4 md:mt-0 py-3 rounded-md"
+          >
+            search
+          </button>
         </div>
       </div>
     </div>
     <main class="mt-20">
       <h1 class="text-xl text-center">Your Favourite Food</h1>
-      <div id="display" class="grid md:grid-cols-3 gap-4 m-4 h-full">
-    
-      </div>
+      <div id="display" class="grid md:grid-cols-3 gap-4 m-4 h-full"></div>
     </main>
-    <!-- The button to open modal -->
-
-<!-- Put this part before </body> tag -->
-
- <div id="some">
-    <div class="modal" id="my-modal-2">
+    
+    <div id="some">
+      <div class="modal" id="my-modal-2">
         <div class="modal-box">
-        <h3 id="title" class="font-bold text-lg">
-       
-        </h3>
-       <div id="imgs">
-
-       </div>
-        <p id="body" class="py-4"></p>
-        <div class="modal-action">
-         <a href="#" class="btn cursor-pointer">close</a>
+          <h3 id="title" class="font-bold text-lg"></h3>
+          <div id="imgs"></div>
+          <p id="body" class="py-4"></p>
+          <div class="modal-action">
+            <a href="#" class="btn cursor-pointer">close</a>
+          </div>
         </div>
       </div>
-      </div>
- </div>
-
-    <div class="h-[400px]"></div>
+    </div>
+    <footer class="footer p-10 bg-base-200 text-base-content">
+        <div>
+          <span class="footer-title">Services</span> 
+          <a class="link link-hover">Branding</a> 
+          <a class="link link-hover">Design</a> 
+          <a class="link link-hover">Marketing</a> 
+          <a class="link link-hover">Advertisement</a>
+        </div> 
+        <div>
+          <span class="footer-title">Company</span> 
+          <a class="link link-hover">About us</a> 
+          <a class="link link-hover">Contact</a> 
+          <a class="link link-hover">Jobs</a> 
+          <a class="link link-hover">Press kit</a>
+        </div> 
+        <div>
+          <span class="footer-title">Legal</span> 
+          <a class="link link-hover">Terms of use</a> 
+          <a class="link link-hover">Privacy policy</a> 
+          <a class="link link-hover">Cookie policy</a>
+        </div> 
+        <div>
+          <span class="footer-title">Newsletter</span> 
+          <div class="form-control w-80">
+            <label class="label">
+              <span class="label-text">Enter your email address</span>
+            </label> 
+            <div class="relative ">
+              <input type="text" placeholder="username@site.com" class="input input-bordered md:w-full w-[70%] pr-16" /> 
+              <button class="btn mt-4 md:mt-0 btn-primary md:absolute top-0 right-0 rounded-l-none">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./app.js"></script>
   </body>
