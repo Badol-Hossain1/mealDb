@@ -8,11 +8,11 @@ const loadData = async (e) => {
 const foodData = (data) => {
   // console.log(data);
   const display = document.getElementById("display");
-  display.innerText = ''
+  display.innerText = "";
   data.forEach((meals) => {
     // console.log(meals.idMeal);
     const div = document.createElement("div");
-    
+
     div.classList.add("col");
     div.innerHTML = `
     <div class="max-w-sm w-full lg:max-w-full lg:flex">
@@ -54,59 +54,32 @@ const foodData = (data) => {
 
     display.appendChild(div);
   });
-  let noOfCharac = 150;
-  var contents = document.getElementById("more").textContent;
-  //   console.log(contents);
-  // for(let i = 0; i<more.length; i++){
-  //     more[i].addEventListener('click',function(){
-  //         more[i].classList.toggle('active')
-  //     })
-  // }
-
-  // if (content.textContent.length < noOfCharac) {
-  //   content.nextElementSibling.style.display = "none";
-  // } else {
-  //   let displayText = content.textContent.slice(0, noOfCharac);
-  //   let moreText = content.textContent.slice(noOfCharac);
-  //   console.log(displayText);
-  // }
 };
 
 const loadMoreData = async (e) => {
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${e}`;
-  
+
   console.log(url);
   const data = await fetch(url);
   const res = await data.json();
 
   moreDataDispaly(res.meals[0]);
 };
-const moreDataDispaly = (e) => {
-    console.log(e);
-  const some = document.getElementById("some");
+const moreDataDispaly = (el) => {
+  console.log(el);
+  const body = (document.getElementById("body").innerText = el.strInstructions);
 
-    const div = document.createElement("div");
-    div.innerHTML = `
-    <div class="modal" id="my-modal-2">
-    <div class="modal-box">
-    <h3 id="title" class="font-bold text-lg">
-    ${e.strMeal}
-    </h3>
-    <img id="imgs" src='${e.strMealThumb}' alt="">
-    <p id="body" class="py-4">${e.strInstructions}</p>
-    <div class="modal-action">
-     <a href="#" class="btn cursor-pointer">close</a>
-    </div>
-  </div>
-  </div>`;
-  
-    some.appendChild(div);
-
+  const data = (document.getElementById("title").innerText = el.strMeal);
+  const img = (document.getElementById(
+    "imgs",
+  ).innerHTML = ` <img id="imgs" src='${el.strMealThumb}' alt="">`);
+  const div = document.createElement("div");
+  div.classList.add("col");
 };
 
 const searchMeal = () => {
   const input = document.getElementById("input").value;
   console.log(input);
-  loadData(input,)
+  loadData(input);
 };
-loadData('fish');
+loadData("fish");
